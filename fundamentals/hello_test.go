@@ -42,6 +42,14 @@ func TestCleverHello(t *testing.T) {
 
 }
 
+func TestBiLingualHello(t *testing.T) {
+	t.Run("in Spanish", func(t *testing.T) {
+		got := BiLingualHello("Elodie", "Spanish")
+		want := "Hola, Elodie"
+		assertCorrectMessage(t, got, want)
+	})
+}
+
 func assertCorrectMessage(t testing.TB, got, want string) {
 	t.Helper()
 	if got != want {
