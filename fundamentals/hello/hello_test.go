@@ -2,7 +2,9 @@ package main
 
 // go test
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestHello(t *testing.T) {
 	got := Hello("James")
